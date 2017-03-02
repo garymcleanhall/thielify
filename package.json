@@ -30,7 +30,8 @@
   "homepage": "https://github.com/garymcleanhall/thielify#readme",
   "dependencies": {
     "hogan": "^1.0.2",
-    "hogan.js": "^3.0.2"
+    "hogan.js": "^3.0.2",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "jasmine": "^2.5.3"

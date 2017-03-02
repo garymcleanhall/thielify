@@ -4,3 +4,4 @@ tests = ./tests/**/*_spec.js
 
 test:
 	$(bin-dir)jasmine $(tests)
+

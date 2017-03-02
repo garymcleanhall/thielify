@@ -4,7 +4,7 @@ const
 
 withThielify = (assertionCallback, parameters) => {
 
-  exec(`node index.js ${parameters || ''}`, (error, stdout, stderr) => {
+  exec(`./bin/thielify ${parameters || ''}`, (error, stdout, stderr) => {
     
     expect(error).toBeNull()
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 const
       hogan = require('hogan.js'),
@@ -10,10 +11,11 @@ if(args.template === undefined || args.json === undefined) {
 } 
 
 let templateContent = fs.readFileSync(args.template, 'ascii')
-
 let template = hogan.compile(templateContent)
-let data = require(args.json)
 
-let renderedContent = template.render(data)
+let jsonDataContent = fs.readFileSync(args.json, 'ascii')
+let jsonData = JSON.parse(jsonDataContent)
+
+let renderedContent = template.render(jsonData)
 
 console.log(renderedContent)

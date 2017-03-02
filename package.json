@@ -2,7 +2,7 @@
   "name": "thielify",
   "version": "0.9.0",
   "description": "CLI for hogan to convert templates + json into static files",
-  "main": "index.js",
+  "bin": "./bin/thielify",
   "scripts": {
     "test": "make test"
   },

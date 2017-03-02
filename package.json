@@ -1,0 +1,38 @@
+{
+  "name": "thielify",
+  "version": "0.9.0",
+  "description": "CLI for hogan to convert templates + json into static files",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/garymcleanhall/thielify.git"
+  },
+  "keywords": [
+    "hulk",
+    "hogan",
+    "thiel",
+    "thielify",
+    "transform",
+    "templates",
+    "html",
+    "javascript",
+    "static",
+    "cli"
+  ],
+  "author": "Gary McLean Hall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garymcleanhall/thielify/issues"
+  },
+  "homepage": "https://github.com/garymcleanhall/thielify#readme",
+  "dependencies": {
+    "hogan": "^1.0.2",
+    "hogan.js": "^3.0.2"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  }
+}

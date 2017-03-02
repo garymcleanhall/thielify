@@ -14,6 +14,10 @@ withThielify = (assertionCallback, parameters) => {
 
 }
 
+expectUsageMessage = (stderr) => {
+  expect(stderr.trim()).toContain('Usage: thielify --template template-path --json data-file')
+}
+
 describe('thielify', () => {
 
   it('shows usage when without parameters', done => {
@@ -22,11 +26,39 @@ describe('thielify', () => {
 
       expect(stdout).toEqual('')
 
-      expect(stderr.trim()).toContain('Usage: thielify --template template-path --json data-file')
+      expectUsageMessage(stderr)
 
       done()
 
     }) 
+
+  })
+
+  it('requires template parameter', done => {
+
+    withThielify((stdout, stderr) => {
+
+      expect(stdout).toEqual('')
+
+      expectUsageMessage(stderr)
+
+      done()
+      
+    }, '--json ./tests/fixtures/data.json')
+
+  })
+
+  it('requires json parameter', done => {
+
+    withThielify((stdout, stderr) => {
+
+      expect(stdout).toEqual('')
+
+      expectUsageMessage(stderr)
+
+      done()
+
+    }, '--template ./tests/fixtures/index.html.template')
 
   })
 

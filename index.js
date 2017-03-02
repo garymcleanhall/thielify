@@ -1,14 +1,13 @@
 
 const
       hogan = require('hogan.js'),
-      fs = require('fs')
+      fs = require('fs'),
+      args = require('minimist')(process.argv.slice(2))
 
-if(process.argv.length <= 2) {
+if(args.template === undefined || args.json === undefined) {
   console.error('Usage: thielify --template template-path --json data-file')
   process.exit(0)
 } 
-
-const args = require('minimist')(process.argv.slice(2))
 
 let templateContent = fs.readFileSync(args.template, 'ascii')
 

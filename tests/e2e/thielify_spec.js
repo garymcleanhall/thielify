@@ -8,7 +8,7 @@ withThielify = (assertionCallback) => {
     
     expect(error).toBeNull()
 
-    assertionCallback(stdout, stderr);
+    assertionCallback(stdout, stderr)
 
   })
 
@@ -16,15 +16,17 @@ withThielify = (assertionCallback) => {
 
 describe('thielify', () => {
 
-  it('outputs a hello world', done => {
+  it('shows usage when without parameters', done => {
 
     withThielify((stdout, stderr) => {
 
-      expect(stdout.trim()).toEqual('Hello GARY!')
+      expect(stdout).toEqual('')
+
+      expect(stderr.trim()).toContain('Usage: thielify --templates [templates-path] --json [data-file] --output [output-path]')
 
       done()
 
-    })
+    }) 
 
   })
 

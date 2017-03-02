@@ -2,13 +2,23 @@
 const
       exec = require('child_process').exec
 
+withThielify = (assertionCallback) => {
+
+  exec('node index.js', (error, stdout, stderr) => {
+    
+    expect(error).toBeNull()
+
+    assertionCallback(stdout, stderr);
+
+  })
+
+}
+
 describe('thielify', () => {
 
   it('outputs a hello world', done => {
 
-    const thielify = exec('node index.js', (error, stdout, stderr) => {
-
-      expect(error).toBeNull()
+    withThielify((stdout, stderr) => {
 
       expect(stdout.trim()).toEqual('Hello GARY!')
 

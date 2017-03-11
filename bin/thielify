@@ -10,7 +10,7 @@ if(args.template === undefined || args.json === undefined) {
   process.exit(0)
 } 
 
-let templateContent = fs.readFileSync(args.template, 'ascii')
+let templateContent = fs.readFileSync(args.template, 'utf8')
 let template = hogan.compile(templateContent)
 
 let jsonDataContent = fs.readFileSync(args.json, 'ascii')

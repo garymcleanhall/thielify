@@ -1,0 +1,9 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{message}}</title>
+  </head>
+  <body>
+    <div>¥</div>
+  </body>
+</html>

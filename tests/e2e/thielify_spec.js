@@ -48,4 +48,11 @@ describe('thielify', () => {
     }, '--template ./tests/fixtures/index.html.template --json ./tests/fixtures/data.json')
   })
 
+  it('supports utf8 templates', done => {
+    withThielify((stdout, stderr) => {
+      expect(stdout).toContain('¥')
+      done()
+    }, '--template ./tests/fixtures/index-utf8.html.template --json ./tests/fixtures/data.json')
+  })
+
 })

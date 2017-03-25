@@ -1,4 +1,4 @@
-#Thielify
+# Thielify
 
 CLI for transforming Hogan template files using supplied json parameters.
 
